@@ -31,7 +31,7 @@ import java.util.Map;
 public class Login extends AppCompatActivity {
 
     ProgressDialog pDialog;
-    Button btn_register, btn_login;
+    Button btn_register, btn_login,btn_skip;
     EditText txt_username, txt_password;
     Intent intent;
 
@@ -74,6 +74,7 @@ public class Login extends AppCompatActivity {
 
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_register = (Button) findViewById(R.id.btn_register);
+        btn_skip = (Button) findViewById(R.id.btn_skip);
         txt_username = (EditText) findViewById(R.id.txt_username);
         txt_password = (EditText) findViewById(R.id.txt_password);
 
@@ -126,6 +127,19 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn_skip.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                intent = new Intent(Login.this, form_kategori.class);
+                finish();
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 

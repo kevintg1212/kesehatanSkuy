@@ -55,4 +55,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    public void Skip(View view) {
+        Intent intent = new Intent(MainActivity.this, form_kategori.class);
+        startActivity(intent);
+    }
+
 }
